@@ -1,0 +1,4 @@
+npm init -y
+npm i express
+npm install -D @types/express @types/node typescript ts-node
+npm i dotenv mongoose
