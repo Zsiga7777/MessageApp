@@ -2,3 +2,9 @@ npm init -y
 npm i express
 npm install -D @types/express @types/node typescript ts-node
 npm i dotenv mongoose
+npm i morgan helmet cors
+npm i nodemon --save-dev
+npm install body-parser cookie-parser
+npm install zod
+npm install express-mongo-sanitize
+npm install winston
