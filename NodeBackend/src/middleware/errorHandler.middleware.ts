@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import CustomAPIError from "../errors/custom.error";
+import CustomAPIError from "../errors/customError";
 
 const errorHandlerMiddleware = (err: any, req: Request, res: Response, next: NextFunction) => {
     const defaultError = {

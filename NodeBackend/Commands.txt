@@ -7,4 +7,6 @@ npm i nodemon --save-dev
 npm install body-parser cookie-parser
 npm install zod
 npm install express-mongo-sanitize
-npm install winston
+npm install Winston
+npm i jsonwebtoken
+npm i bcryptjs nodemailer ejs
