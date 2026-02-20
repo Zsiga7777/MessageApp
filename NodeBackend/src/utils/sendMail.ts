@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 import ejs from "ejs";
-import { validateEnv } from "../config/env.config";
+import { validateEnv } from "../configs/envConfig";
 interface MailOptions {
   email: string | string[];
   subject: string;

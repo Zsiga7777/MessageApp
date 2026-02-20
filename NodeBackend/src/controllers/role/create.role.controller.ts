@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { RoleInterface } from "../../interfaces/roleInterface";
-import RoleModel from "../../model/roleModel";
+import RoleModel from "../../models/roleModel";
 import InternalServerError from "../../errors/internalServerError"
 import { ErrorCode } from "../../errors/customError";
 import { findRoleByName } from "../../services/roleServices";

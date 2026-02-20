@@ -1,6 +1,6 @@
 import { QueryFilter, QueryOptions, UpdateQuery } from "mongoose";
 import {IRole} from "../interfaces/roleInterface";
-import RoleModel from "../model/roleModel";
+import RoleModel from "../models/roleModel";
 
 export async function getAllRolesService() {
     return await RoleModel.find();

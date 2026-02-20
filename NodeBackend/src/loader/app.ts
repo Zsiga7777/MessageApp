@@ -8,8 +8,8 @@ import api from "../api/index.api";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser"
 import ExpressMongoSanitize from "express-mongo-sanitize";
-import { corsOptions } from "../config/corsOptions";
-import { errorHandler, successHandler } from "../config/morgan";
+import { corsOptions } from "../configs/corsOptions";
+import { errorHandler, successHandler } from "../configs/morgan";
 
 config();
 export const bootstrapExpress = (app: any) => {

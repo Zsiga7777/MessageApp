@@ -7,7 +7,7 @@ import { createUser, findUserByEmail } from "../../services/userServices";
 import { ErrorCode } from "../../errors/customError";
 import { getAllRolesService } from "../../services/roleServices";
 import { registerUserInput} from "../../validations/auth.validation"
-import { EventEmitterInstance } from "../../config/event-emitter";
+import { EventEmitterInstance } from "../../configs/eventEmitter";
 
 export const registerUser = asyncHandler(async (req: Request<object, object, registerUserInput>, res: Response) => {
  const { email, password, name } = req.body;

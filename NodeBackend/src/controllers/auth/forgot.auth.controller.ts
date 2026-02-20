@@ -5,7 +5,7 @@ import { generateRandom6DigitString } from "../../utils/util";
 import { forgotPasswordInput } from "../../validations/auth.validation";
 import asyncHandler from "express";
 import { findUserByEmail } from "../../services/userServices";
-import { EventEmitterInstance } from "../../config/event-emitter";
+import { EventEmitterInstance } from "../../configs/eventEmitter";
 import { ErrorCode } from "../../errors/customError";
 
 //@desc forgot password for customer

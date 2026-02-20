@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 import UnAuthenticatedError from "../errors/unAuthorizedError";
 import ForbiddenError from "../errors/forbiddenError";
 import { ErrorCode } from "../errors/customError";
-import { validateEnv } from "../config/env.config";
+import { validateEnv } from "../configs/envConfig";
 import { findExtendedUsers } from "../services/userServices";
 import NotFoundError from "../errors/notFoundError";
 import { IRole } from "../interfaces/roleInterface";

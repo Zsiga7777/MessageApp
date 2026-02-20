@@ -1,9 +1,9 @@
 import { bootstrapExpress } from "./app";
-import { logger } from '../config/logger';
-import { validateEnv } from "../config/env.config";
-import { connectToDB } from "../config/mongoose";
-import { EventEmitterInstance } from "../config/event-emitter";
-import { signUpSubscriber, forgetPasswordSubscriber } from "../subscriber/authSubscriber";
+import { logger } from '../configs/logger';
+import { validateEnv } from "../configs/envConfig";
+import { connectToDB } from "../configs/mongoose";
+import { EventEmitterInstance } from "../configs/eventEmitter";
+import { signUpSubscriber, forgetPasswordSubscriber } from "../subscribers/authSubscriber";
 
 export const bootstrap = async (app) => {
     validateEnv()

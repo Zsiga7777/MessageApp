@@ -1,7 +1,7 @@
 import express, { Express } from "express";
 import { Server, createServer } from 'http';
-import { logger } from './src/config/logger';
-import { validateEnv } from "./src/config/env.config"
+import { logger } from './src/configs/logger';
+import { validateEnv } from "./src/configs/envConfig"
 import mongoose from "mongoose";
 import { bootstrap } from "./src/loader/bootstrap";
 

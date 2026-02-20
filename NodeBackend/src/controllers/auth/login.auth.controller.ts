@@ -6,9 +6,9 @@ import asyncHandler from 'express';
 import bcrypt from 'bcryptjs';
 import { signJwt } from "../../utils/jwt";
 import { findUser } from "../../services/userServices";
-import TokenModel from "../../model/refreshTokenModel";
+import TokenModel from "../../models/refreshTokenModel";
 import { ErrorCode } from "../../errors/customError";
-import { validateEnv } from "../../config/env.config";
+import { validateEnv } from "../../configs/envConfig";
 
 //@desc  Login customer
 //@method POST  /customer-auth/login

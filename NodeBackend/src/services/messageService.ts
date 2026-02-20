@@ -1,5 +1,5 @@
 import { ObjectId, QueryOptions, UpdateQuery } from "mongoose";
-import messageModel from "../model/messageModel";
+import messageModel from "../models/messageModel";
 import { IMessage } from "../interfaces/messageInterface";
 
 export async function findMessagesByChat(chatId: ObjectId) {

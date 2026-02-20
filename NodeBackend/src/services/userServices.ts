@@ -1,6 +1,6 @@
 import {QueryFilter, QueryOptions, Schema, UpdateQuery } from "mongoose";
 import { IUser } from "../interfaces/userInterface";
-import UserModel from "../model/userModel";
+import UserModel from "../models/userModel";
 
 export async function findAllUsers() {
     return await UserModel.find()

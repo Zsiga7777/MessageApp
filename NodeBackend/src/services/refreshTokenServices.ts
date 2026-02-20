@@ -1,6 +1,6 @@
 import { QueryFilter, QueryOptions, UpdateQuery } from "mongoose";
 import {IRefreshToken} from "../interfaces/refreshTokenInterface";
-import refreshTokenModel from "../model/refreshTokenModel";
+import refreshTokenModel from "../models/refreshTokenModel";
 
 export async function findTokenById(id: string) {
     return await refreshTokenModel.findById(id);

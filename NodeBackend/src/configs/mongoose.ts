@@ -1,15 +1,14 @@
-import { connect, set } from 'mongoose';
-import { validateEnv } from '../config/env.config';
+import { connect, set } from "mongoose";
+import { validateEnv } from "./envConfig";
 
 const MONGO_DB_URI = validateEnv().MONGO_DB_URI;
 
 export const connectToDB = async () => {
   try {
-    set('strictQuery', false);
+    set("strictQuery", false);
     const db = await connect(MONGO_DB_URI);
-    console.log('MongoDB connected to', db.connection.name);
+    console.log("MongoDB connected to", db.connection.name);
   } catch (error) {
     console.error(error);
-
   }
 };

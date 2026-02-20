@@ -1,6 +1,6 @@
-import dotenv from 'dotenv';
-import { EnvConfig, envSchema } from '../validations/env.validation';
-import { ZodError } from 'zod';
+import dotenv from "dotenv";
+import { EnvConfig, envSchema } from "../validations/env.validation";
+import { ZodError } from "zod";
 dotenv.config();
 
 export const validateEnv = () => {
@@ -14,7 +14,7 @@ export const validateEnv = () => {
         accessSecret: envVars.JWT_SECRET_KEY,
         refreshTokenSecret: envVars.JWT_REFRESH_SECRET_KEY,
       },
-       smtp: {
+      smtp: {
         host: envVars.SMTP_HOST,
         port: envVars.SMTP_PORT,
         service: envVars.SMTP_SERVICE,
@@ -26,9 +26,9 @@ export const validateEnv = () => {
     let message = undefined;
     if (error instanceof ZodError) {
       message = error.message;
-      console.error('Validation failed:', error.message);
+      console.error("Validation failed:", error.message);
     } else {
-      console.error('Error parsing environment variables:', error);
+      console.error("Error parsing environment variables:", error);
     }
   }
 };

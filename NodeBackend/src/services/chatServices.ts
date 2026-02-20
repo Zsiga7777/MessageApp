@@ -1,5 +1,5 @@
 import { ObjectId, QueryOptions, UpdateQuery } from "mongoose";
-import chatModel from "../model/chatModel";
+import chatModel from "../models/chatModel";
 import { IChat } from "../interfaces/chatInterface";
 
 export async function findChatsByUser(userId: ObjectId) {
