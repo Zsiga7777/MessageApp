@@ -1,6 +1,6 @@
-import { Document, ObjectId } from "mongoose";
+import { Types } from "mongoose";
 
-export interface IUser extends Document {
+export interface IUser {
   password: string;
   email: string;
   name: string;
@@ -8,6 +8,6 @@ export interface IUser extends Document {
   OTPCode?: string;
   OTPCodeExpires?: number;
   passwordResetCode?: string;
-  role: ObjectId;
+  role: Types.ObjectId;
   age: number;
 }

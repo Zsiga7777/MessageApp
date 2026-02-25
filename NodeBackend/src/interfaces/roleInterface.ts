@@ -1,5 +1,3 @@
-import { Document } from "mongoose";
-
-export interface IRole extends Document {
+export interface IRole {
   name: string;
 }

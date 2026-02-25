@@ -1,6 +1,6 @@
-import Document, { ObjectId } from "mongoose";
+import { Types } from "mongoose";
 
-export interface IChat extends Document {
+export interface IChat {
   name: string;
-  users: ObjectId[];
+  users: Types.ObjectId[];
 }

@@ -1,5 +1,5 @@
 import express from "express";
-import role from "./role.api"
+import role from "./roleApi"
 import auth from "./auth.api"
 
 const router = express.Router();

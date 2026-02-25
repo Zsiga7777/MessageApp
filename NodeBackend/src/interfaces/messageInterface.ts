@@ -1,8 +1,8 @@
-import { Document, ObjectId } from "mongoose";
+import { Types } from "mongoose";
 
-export interface IMessage extends Document {
+export interface IMessage {
   message: string;
-  user: ObjectId;
-  chat: ObjectId;
+  user: Types.ObjectId;
+  chat: Types.ObjectId;
   sentDate: Date;
 }

@@ -1,8 +1,8 @@
-import { QueryFilter, QueryOptions, UpdateQuery } from "mongoose";
+import { QueryFilter, QueryOptions, Types, UpdateQuery } from "mongoose";
 import {IRefreshToken} from "../interfaces/refreshTokenInterface";
 import refreshTokenModel from "../models/refreshTokenModel";
 
-export async function findTokenById(id: string) {
+export async function findTokenById(id: Types.ObjectId) {
     return await refreshTokenModel.findById(id);
 }
 
@@ -22,12 +22,12 @@ export async function createToken(tokenData: Partial<IRefreshToken>) {
     }
 }
 
-export async function deleteTokenById(id: string) {
+export async function deleteTokenById(id: Types.ObjectId) {
     return await refreshTokenModel.deleteOne({ _id: id });
 }
 
 export async function updateTokenById(
-    id: string,
+    id: Types.ObjectId,
     update: UpdateQuery<IRefreshToken>,
     options: QueryOptions = { new: true }
 ) {

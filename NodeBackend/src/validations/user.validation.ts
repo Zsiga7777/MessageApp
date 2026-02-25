@@ -1,4 +1,4 @@
-import { object, string, array, TypeOf } from "zod";
+import { object, string, TypeOf } from "zod";
 export const createUserSchema = object({
     body: object({
         email: string({ error: "Email is required" }).email("Invalid email format"),

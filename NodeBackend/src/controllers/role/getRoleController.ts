@@ -1,8 +1,7 @@
 import { Request, Response } from "express";
-import NotFoundError from "../../errors/notFoundError";
-import InternalServerError from "../../errors/internalServerError";
 import { ErrorCode } from "../../errors/customError";
-import {getAllRolesService, findRoleById} from "../../services/roleServices"
+import {getAllRolesService, getRoleByNameService, } from "../../services/roleServices"
+import { InternalServerError, NotFoundError } from "../../errors/indexError";
 
 export const getAllRoles = async (req: Request, res: Response) => {
     try {
@@ -13,15 +12,15 @@ export const getAllRoles = async (req: Request, res: Response) => {
     }
 };
 
-export const getRoleById = async (req: Request, res: Response) => {
-    const { id } = req.params;
+export const getRoleByName = async (req: Request, res: Response) => {
+    const  name  = req.params.name;
     try {
-        const role = await findRoleById(id[0]);
+        const role = await getRoleByNameService(name[0]);
         if (!role) {
             throw new NotFoundError('Role not found', ErrorCode.NOT_FOUND);
         }
         res.status(200).json({ role, success: true });
     } catch (error) {
-        throw new InternalServerError(`Failed to fetch role with ID: ${id}`, ErrorCode.INTERNAL_SERVER);
+        throw new InternalServerError(`Failed to fetch role with name: ${name}`, ErrorCode.INTERNAL_SERVER);
     }
 };

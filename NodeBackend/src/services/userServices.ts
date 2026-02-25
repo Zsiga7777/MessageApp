@@ -1,4 +1,4 @@
-import {QueryFilter, QueryOptions, Schema, UpdateQuery } from "mongoose";
+import {QueryFilter, QueryOptions, Types, UpdateQuery } from "mongoose";
 import { IUser } from "../interfaces/userInterface";
 import UserModel from "../models/userModel";
 
@@ -6,7 +6,7 @@ export async function findAllUsers() {
     return await UserModel.find()
 }
 
-export const findUser = async (userId: string) => {
+export const findUser = async (userId: Types.ObjectId) => {
     return await UserModel.findById(userId)
         .populate('role')
         .exec();
@@ -26,7 +26,7 @@ export async function createUser(userData: Partial<IUser>) {
 }
 
 export async function updateUserById(
-    id: string,
+    id: Types.ObjectId,
     update: UpdateQuery<IUser>,
     options: QueryOptions = { new: true }
 ) {
@@ -37,6 +37,6 @@ export async function updateUserById(
         return { data: null, success: false, error };
     }
 }
-export async function deleteUserById(id: string) {
+export async function deleteUserById(id: Types.ObjectId) {
     return await UserModel.deleteOne({ _id: id });
 }
