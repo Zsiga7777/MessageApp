@@ -1,18 +1,12 @@
-import express from 'express';
-import {
-    createChat,
-    getChatWithUsersByChatId,
-    getChatsByUserId,
-    deleteChat,
-    updateChat
-} from '../controllers/chat/indexChatController';
+import express from "express";
+import * as controller from "../controllers/ChatController";
 
 const router = express.Router();
 
-router.post('/create',  createChat);
-router.get('/user/:userId',  getChatsByUserId);
-router.get('/chat/:chatId',  getChatWithUsersByChatId);
-router.delete("/:id", deleteChat)
-router.put("/:id", updateChat)
+router.post("/create", controller.createChatAsync);
+router.get("/user/:userId", controller.getChatsByUserIdAsync);
+router.get("/chat/:chatId", controller.getChatWithUsersByChatIdAsync);
+router.delete("/:id", controller.deleteChatAsync);
+router.put("/:id", controller.updateChatAsync);
 
 export default router;

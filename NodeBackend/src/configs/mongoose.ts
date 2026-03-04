@@ -3,7 +3,7 @@ import { validateEnv } from "./envConfig";
 
 const MONGO_DB_URI = validateEnv().MONGO_DB_URI;
 
-export const connectToDB = async () => {
+export const connectToDBAsync = async () => {
   try {
     set("strictQuery", false);
     const db = await connect(MONGO_DB_URI);

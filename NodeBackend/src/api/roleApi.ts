@@ -1,18 +1,12 @@
-import express from 'express';
-import {
-    createRole,
-    getAllRoles,
-    getRoleByName,
-    deleteRole,
-    updateRole
-} from '../controllers/role/indexRoleController';
+import express from "express";
+import * as controller from "../controllers/roleController";
 
 const router = express.Router();
 
-router.post('/create',  createRole);
-router.get('/',  getAllRoles);
-router.get('/:name',  getRoleByName);
-router.delete("/:id", deleteRole)
-router.put("/:id", updateRole)
+router.post("/create", controller.createRoleAsync);
+router.get("/", controller.getAllRolesAsync);
+router.get("/:name", controller.getRoleByNameAsync);
+router.delete("/:id", controller.deleteRoleAsync);
+router.put("/:id", controller.updateRoleAsync);
 
 export default router;

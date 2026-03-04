@@ -1,16 +1,11 @@
-import express from 'express';
-import {
- createMessage,  
- getMessagesByChatId,
- deleteMessage,
- updateMessage
-} from '../controllers/message/indexMessageController';
+import express from "express";
+import * as controller from "../controllers/messageController";
 
 const router = express.Router();
 
-router.post('/create',  createMessage);
-router.get("/chat/:chatId", getMessagesByChatId)
-router.delete("/:id", deleteMessage)
-router.put("/:id", updateMessage)
+router.post("/create", controller.createMessageAsync);
+router.get("/chat/:chatId", controller.getMessagesByChatIdAsync);
+router.delete("/:id", controller.deleteMessageAsync);
+router.put("/:id", controller.updateMessageAsync);
 
 export default router;

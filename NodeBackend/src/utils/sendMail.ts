@@ -8,7 +8,7 @@ interface MailOptions {
   data: Record<string, any>;
 }
 
-export const sendMail = async (options: MailOptions): Promise<void> => {
+export const sendMailAsync = async (options: MailOptions): Promise<void> => {
   try {
     const transporter = nodemailer.createTransport({
       host: validateEnv().smtp.host,

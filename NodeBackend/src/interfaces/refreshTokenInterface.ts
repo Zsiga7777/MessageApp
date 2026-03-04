@@ -1,6 +1,6 @@
 import { Types } from "mongoose";
 
-export interface IRefreshToken{
+export interface IRefreshToken {
   token: string;
   user: Types.ObjectId;
   expires: Date;

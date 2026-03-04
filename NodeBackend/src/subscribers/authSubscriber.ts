@@ -1,7 +1,7 @@
-import { sendMail } from "../utils/sendMail";
+import { sendMailAsync } from "../utils/sendMail";
 
-export const signUpSubscriber = async (data) => {
-  await sendMail({
+export const signUpSubscriberAsync = async (data) => {
+  await sendMailAsync({
     email: data?.email,
     subject: "Email verification",
     template: "emailverification.mails.ejs",
@@ -12,8 +12,8 @@ export const signUpSubscriber = async (data) => {
   });
 };
 
-export const forgetPasswordSubscriber = async (data) => {
-  await sendMail({
+export const forgetPasswordSubscriberAsync = async (data) => {
+  await sendMailAsync({
     email: data?.email,
     subject: "Password reset code",
     template: "passwordReset.mails.ejs",
