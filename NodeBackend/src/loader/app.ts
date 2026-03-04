@@ -3,8 +3,8 @@ import express from "express";
 import morgan from "morgan";
 import helmet from "helmet";
 import cors from "cors";
-import { notFoundMiddleware, errorHandlerMiddleware } from "../middleware/index.middleware";
-import api from "../api/index.api";
+import { notFoundMiddleware, errorHandlerMiddleware } from "../middleware/indexMiddleware";
+import api from "../api/indexApi";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser"
 import ExpressMongoSanitize from "express-mongo-sanitize";

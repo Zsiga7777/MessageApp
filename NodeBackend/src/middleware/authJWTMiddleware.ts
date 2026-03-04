@@ -4,11 +4,11 @@ import UnAuthenticatedError from "../errors/unAuthorizedError";
 import ForbiddenError from "../errors/forbiddenError";
 import { ErrorCode } from "../errors/customError";
 import { validateEnv } from "../configs/envConfig";
-import { findUser } from "../services/userServices";
+import { getUserByIdService } from "../services/userServices";
 import NotFoundError from "../errors/notFoundError";
 import { IRole } from "../interfaces/roleInterface";
-import { IUser } from "../interfaces/userInterface";
 import { extractTokenfromHeader } from "../utils/util";
+import { Types } from "mongoose";
 
 export interface UserDataType {
  userId: string;
@@ -33,12 +33,12 @@ export const AuthJWT = (
  if (err) return next(new ForbiddenError("Token expires", ErrorCode?.UNAUTHENTICATED_USER));
 
  const decodeData = decoded as UserDataType;
- const userWithPermission = await findUser(decodeData?.userId)
+ const userWithPermission = await getUserByIdService(new Types.ObjectId(decodeData?.userId))
 
  if (!userWithPermission) throw new NotFoundError("User not found", ErrorCode.NOT_FOUND)
  req.userData = {
  userId: decodeData?.userId,
- //role: userWithPermission.role
+
 }
 
 next();

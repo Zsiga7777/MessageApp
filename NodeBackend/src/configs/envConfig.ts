@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-import { EnvConfig, envSchema } from "../validations/env.validation";
+import { EnvConfig, envSchema } from "../validations/envValidation";
 import { ZodError } from "zod";
 dotenv.config();
 

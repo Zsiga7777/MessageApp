@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { loginUserInput } from "../../validations/auth.validation";
+import { loginUserInput } from "../../validations/registerUserValidation";
 import BadRequestError from "../../errors/badRequestError";
 import ForbiddenError from "../../errors/forbiddenError";
 import asyncHandler from 'express';

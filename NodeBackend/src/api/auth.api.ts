@@ -7,7 +7,7 @@ import {
     ResetPasswordSchema,
     loginUserSchema,
     changeOldPasswordSchema
-} from "../validations/auth.validation";
+} from "../validations/registerUserValidation";
 import {
     registerUser,
     activateUser,
@@ -16,7 +16,7 @@ import {
     login,
     changePassword
 } from '../controllers/auth/index.auth.controller'
-import { AuthJWT } from "../middleware/authJWT.middleware";
+import { AuthJWT } from "../middleware/authJWTMiddleware";
 
 const router = express.Router();
 

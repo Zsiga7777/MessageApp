@@ -6,7 +6,7 @@ import asyncHandler from 'express';
 import { createUser, findUserByEmail } from "../../services/userServices";
 import { ErrorCode } from "../../errors/customError";
 import { getAllRolesService } from "../../services/roleServices";
-import { registerUserInput} from "../../validations/auth.validation"
+import { registerUserInput} from "../../validations/registerUserValidation"
 import { EventEmitterInstance } from "../../configs/eventEmitter";
 
 export const registerUser = asyncHandler(async (req: Request<object, object, registerUserInput>, res: Response) => {
