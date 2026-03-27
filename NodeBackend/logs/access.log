@@ -17,3 +17,11 @@
  POST /api/role/create 500 0.424 ms Thunder Client (https://www.thunderclient.com) Wed, 18 Feb 2026 09:04:40 GMT 
  POST /api/create 500 0.438 ms Thunder Client (https://www.thunderclient.com) Wed, 18 Feb 2026 09:04:44 GMT 
  POST /api/role/create 500 0.450 ms Thunder Client (https://www.thunderclient.com) Wed, 18 Feb 2026 09:06:47 GMT 
+ POST /api/role/create 500 3.601 ms Thunder Client (https://www.thunderclient.com) Fri, 27 Mar 2026 09:04:37 GMT 
+ POST /api/role/create 500 0.642 ms Thunder Client (https://www.thunderclient.com) Fri, 27 Mar 2026 09:05:20 GMT 
+ POST /api/role/create 500 0.413 ms Thunder Client (https://www.thunderclient.com) Fri, 27 Mar 2026 09:05:20 GMT 
+ POST /api/role/create 500 0.505 ms Thunder Client (https://www.thunderclient.com) Fri, 27 Mar 2026 09:05:20 GMT 
+ POST /api/role/create 500 0.436 ms Thunder Client (https://www.thunderclient.com) Fri, 27 Mar 2026 09:05:20 GMT 
+ POST /api/role/create 500 0.448 ms Thunder Client (https://www.thunderclient.com) Fri, 27 Mar 2026 09:05:21 GMT 
+ POST /api/role/create 500 0.599 ms Thunder Client (https://www.thunderclient.com) Fri, 27 Mar 2026 09:05:21 GMT 
+ POST /api/role/create 500 0.534 ms Thunder Client (https://www.thunderclient.com) Fri, 27 Mar 2026 09:05:21 GMT 

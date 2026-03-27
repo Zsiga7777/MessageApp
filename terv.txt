@@ -1,0 +1,44 @@
+- alap backend node-ban --kész
+	funkciók:
+		- regisztráció
+		- login
+		- elfejtett jelszó
+		- jelszó módosítás
+		- felhasználó aktiválás
+		- chat létrehozása
+		- chat törlése
+		- chat módosítása
+		- chat lekérése
+		- üzenetek lekérése egy chatben
+		- üzenet létrehozása
+		- üzenet törlése
+		- üzenet módosítása
+		- felhasználó lekérése email alapján
+		- felhasználó módosítása
+		- felhasználó törlése
+		- jwt token
+- alap mobilapp react-native-ben --folyamatban
+		funkciók:
+		- regisztráció
+		- login
+		- elfejtett jelszó
+		- jelszó módosítás
+		- felhasználó aktiválás
+		- chat létrehozása
+		- chat törlése
+		- chat módosítása
+		- chat lekérése
+		- üzenetek lekérése egy chatben
+		- üzenet létrehozása
+		- üzenet törlése
+		- üzenet módosítása
+		- felhasználó lekérése email alapján
+		- felhasználó módosítása
+		- felhasználó törlése
+		- jwt token
+
+
+- java backend node-al megegyező funkcionalitás
+- tauri mobilapp react-native-el megegyező app
+
+- ötlet szerint bővíteni a java+tauri dolgokat
