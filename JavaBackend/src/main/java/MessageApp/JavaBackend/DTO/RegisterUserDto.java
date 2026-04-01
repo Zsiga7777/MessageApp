@@ -1,21 +1,18 @@
 package MessageApp.JavaBackend.DTO;
 
+import lombok.*;
+
+@Getter
+@Setter
+@RequiredArgsConstructor
+@NoArgsConstructor
 public class RegisterUserDto {
 
-    public  String password;
+    private @NonNull String password;
 
-    public  String email;
+    private  @NonNull  String email;
 
-    public  String name;
+    private  @NonNull  String name;
 
-    public  Integer age;
-
-    public  RegisterUserDto(){}
-
-    public  RegisterUserDto(String password, String email, String name, Integer age){
-        this.password = password;
-        this.email = email;
-        this.name = name;
-        this.age = age;
-    }
+    private  @NonNull  Integer age;
 }

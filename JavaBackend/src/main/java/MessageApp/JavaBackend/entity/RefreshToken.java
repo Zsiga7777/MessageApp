@@ -1,31 +1,31 @@
 package MessageApp.JavaBackend.entity;
 
 import com.mongodb.lang.Nullable;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.sql.Ref;
-import java.util.Date;
+import java.time.LocalDate;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Document(collection = "RefreshTokens")
 public class RefreshToken {
     @Id
-    public @Nullable String id;
+    private @Nullable String id;
 
-    public  String token;
+    private   String token;
 
-    public  String userId;
+    private   String userId;
 
-    public Date expiresAt;
+    private LocalDate expiresAt;
 
-    public  Date createdAt;
+    private   LocalDate createdAt;
 
-    public @Nullable  Date updatedAt;
-
-    public  RefreshToken() {}
-
-    public RefreshToken(String token, String userId, Date expiresAt, Date createdAt){
-        this.token = token;
+    public  RefreshToken(String token, String userId, LocalDate expiresAt, LocalDate createdAt){
+        this.token=token;
         this.userId = userId;
         this.expiresAt = expiresAt;
         this.createdAt = createdAt;

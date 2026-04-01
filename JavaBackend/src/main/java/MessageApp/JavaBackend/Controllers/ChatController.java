@@ -12,7 +12,7 @@ import java.util.List;
 public class ChatController {
 
     @GetMapping("/{userId}")
-    public ResponseEntity<Chat> getChetByUserId(@PathVariable String userId){
+    public ResponseEntity<List<Chat>> getChatsByUserId(@PathVariable String userId){
 
     }
 

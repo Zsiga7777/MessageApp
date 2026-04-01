@@ -6,7 +6,7 @@ import lombok.*;
 @Setter
 @RequiredArgsConstructor
 @NoArgsConstructor
-public class LoginDto {
-    private @NonNull String email;
-    private @NonNull  String password;
+public class LoginResponseDto {
+    private @NonNull String userId;
+    private @NonNull  String refreshToken;
 }

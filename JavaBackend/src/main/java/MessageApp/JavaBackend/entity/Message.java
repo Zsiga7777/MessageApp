@@ -1,34 +1,30 @@
 package MessageApp.JavaBackend.entity;
 
 import com.mongodb.lang.Nullable;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDate;
 import java.util.Date;
 
+@Getter
+@Setter
+@RequiredArgsConstructor
+@NoArgsConstructor
 @Document(collection = "Messages")
 public class Message {
     @Id
-    public  @Nullable String id;
+    private    @Nullable String id;
 
-    public  String message;
+    private   String message;
 
-    public String userId;
+    private String userId;
 
-    public String chatId;
+    private String chatId;
 
-    public Date sentAt;
+    private Date sentAt;
 
-    public  @Nullable Date updatedAt;
+    private   @Nullable LocalDate updatedAt;
 
-    public  Date updatedDate;
-
-    public  Message(){}
-
-    public  Message(String message, String userId, String chatId, Date sentAt){
-        this.message = message;
-        this.userId = userId;
-        this.chatId = chatId;
-        this.sentAt = sentAt;
-    }
 }

@@ -1,14 +1,12 @@
 package MessageApp.JavaBackend.DTO;
 
+import lombok.*;
+
+@Getter
+@Setter
+@RequiredArgsConstructor
+@NoArgsConstructor
 public class ChangePasswordDto {
-    public  String oldPassword;
-    public  String newPassword;
-
-    public  ChangePasswordDto(){}
-
-    public  ChangePasswordDto(String oldPassword, String newPassword)
-    {
-        this.oldPassword = oldPassword;
-        this.newPassword = newPassword;
-    }
+    private @NonNull   String oldPassword;
+    private @NonNull  String newPassword;
 }

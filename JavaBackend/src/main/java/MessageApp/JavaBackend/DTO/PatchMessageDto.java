@@ -1,17 +1,16 @@
 package MessageApp.JavaBackend.DTO;
 
+import lombok.*;
+
+import java.time.LocalDate;
 import java.util.Date;
 
+@Getter
+@Setter
+@RequiredArgsConstructor
+@NoArgsConstructor
 public class PatchMessageDto {
-    public String message;
+    private @NonNull String message;
 
-    public Date updatedAt;
-
-    public PatchMessageDto() {}
-
-    public PatchMessageDto(String message, Date updatedAt)
-    {
-        this.message = message;
-        this.updatedAt = updatedAt;
-    }
+    private @NonNull LocalDate updatedAt;
 }

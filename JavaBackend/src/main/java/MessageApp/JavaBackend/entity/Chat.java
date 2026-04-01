@@ -1,28 +1,25 @@
 package MessageApp.JavaBackend.entity;
 
-import com.mongodb.lang.NonNullApi;
 import com.mongodb.lang.Nullable;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
+@Getter
+@Setter
+@RequiredArgsConstructor
+@NoArgsConstructor
 @Document(collection = "Chats")
 public class Chat {
     @Id
-    public @Nullable String id;
+    private @Nullable String id;
 
-    public  String name;
+    private   String name;
 
-    public List<String> userIds;
+    private List<String> userIds;
 
-    public @Nullable Date updatedAt;
-
-    public  Chat(){}
-
-    public  Chat(String name, List<String> userIds){
-        this.name = name;
-        this.userIds = userIds;
-    }
+    private @Nullable LocalDate updatedAt;
 }
